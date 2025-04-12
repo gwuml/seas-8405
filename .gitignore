@@ -1,1 +1,4 @@
 homework/
+
+# Ignoring macOS .DS_Store files.
+**/.DS_Store
