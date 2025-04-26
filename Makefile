@@ -30,3 +30,6 @@ clean:
 
 # Default target: start server, generate PDFs, merge them, and clean up
 all: start_server generate_pdfs merge_pdfs clean
+
+sync:
+	rsync -avuz -e "ssh -i ~/.ssh/keys/seas-8405.pem" . ubuntu@100.28.58.31:seas-8405/ --exclude ".git"
