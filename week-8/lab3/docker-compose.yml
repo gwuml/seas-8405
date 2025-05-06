@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  ldap:
+    image: osixia/openldap:1.5.0
+    container_name: lab-ldap
+    environment:
+      LDAP_ORGANISATION: "Lab Org"
+      LDAP_DOMAIN: "lab.org"
+      LDAP_ADMIN_PASSWORD: "admin123"
+    ports:
+      - "389:389"
+    volumes:
+      - ./ldap/users.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/users.ldif
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2.2
+    container_name: lab-keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin123
+    command: start-dev
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ldap
+
+  flask-app:
+    build: ./flask-app
+    container_name: lab-flask
+    ports:
+      - "5000:5000"
+    depends_on:
+      - keycloak
+networks:
+  default:
+    name: lab-network

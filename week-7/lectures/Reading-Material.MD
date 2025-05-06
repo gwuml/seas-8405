@@ -1,4 +1,4 @@
-# Web 3.0 Architecture & Security – Lecture + Lab Pack
+# Web 3.0 Architecture & Security
 
 ## Table of Contents
 1. Overview & Learning Objectives

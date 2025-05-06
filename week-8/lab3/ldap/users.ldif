@@ -1,0 +1,11 @@
+dn: ou=users,dc=lab,dc=org
+objectClass: organizationalUnit
+ou: users
+
+dn: uid=testuser,ou=users,dc=lab,dc=org
+objectClass: inetOrgPerson
+uid: testuser
+cn: Test User
+sn: User
+mail: testuser@lab.org
+userPassword: password123
