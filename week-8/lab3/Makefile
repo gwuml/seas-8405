@@ -1,29 +1,18 @@
-.PHONY: up down reset logs setup
 
-# Determine docker compose command
+.PHONY: up down reset logs
+
 DOCKER_COMPOSE := $(shell command -v docker-compose > /dev/null && echo docker-compose || echo docker compose)
 
-# Build and start containers
 up:
-	@echo "[*] Building and starting containers..."
-	@$(DOCKER_COMPOSE) up -d --build
+	@echo "[*] Starting Lab 2: SAML + LDAP Hybrid Auth..."
+	@bash setup.sh
 
-# Stop and remove containers
 down:
-	@echo "[*] Stopping and removing containers..."
 	@$(DOCKER_COMPOSE) down -v
 
-# Reset the environment
-reset: down up
+reset: down
+	@docker system prune -f
+	@bash setup.sh
 
-# View logs
 logs:
 	@$(DOCKER_COMPOSE) logs -f
-
-# Run Keycloak setup script
-setup:
-	@echo "[*] Running Keycloak setup script..."
-	@bash keycloak/setup.sh
-
-# Default target: up and setup
-all: up setup

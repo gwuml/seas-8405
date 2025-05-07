@@ -1,5 +1,2 @@
-
-Flask
-python3-saml
-xmlsec==1.3.9
-
+flask
+pyjwt
