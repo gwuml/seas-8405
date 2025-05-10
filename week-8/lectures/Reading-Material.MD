@@ -10,11 +10,7 @@ Identity & Access Management (IAM): Foundations, Technologies, Architectures, Br
 
 ## Page 2 – Executive Summary
 
-Identity & Access Management (IAM) is the security discipline that lets the right individuals access the right resources
-at the right time—without compromising confidentiality, integrity, or availability. This primer walks you from
-first principles to real‑world breaches, culminating in a forensic look at the 2023 Okta support‑system incident. Each
-page is written to stand alone while contributing to a cohesive narrative, making the guide useful both for linear study
-and selective reference.
+Identity & Access Management (IAM) is the security discipline that lets the right individuals access the right resources at the right time—without compromising confidentiality, integrity, or availability. This primer walks you from first principles to real‑world breaches, culminating in a forensic look at the 2023 Okta support‑system incident. Each page is written to stand alone while contributing to a cohesive narrative, making the guide useful both for linear study  and selective reference.
 
 ---
 
@@ -41,9 +37,6 @@ and selective reference.
 42‑45. Part VII – Case Study: Okta 2023
 46‑50. Part VIII – Future Trends & Best Practices
 
-*The numbered pages below correspond to physical pages when exported with default Markdown‑to‑PDF settings (≈250 words
-per page at A4, single‑spaced).*
-
 ---
 
 ## Page 5 – Table of Contents (continued)
@@ -57,23 +50,15 @@ per page at A4, single‑spaced).*
 
 ## Page 6 – What Is IAM?
 
-Identity & Access Management (IAM) is the set of frameworks, technologies, and governance processes that ensure digital
-identities are authenticated, authorized, and audited across information systems. IAM sits at the intersection of
-security, risk, and compliance, providing the technical substrate for Zero‑Trust strategies and regulatory mandates such
-as GDPR and HIPAA.
+Identity & Access Management (IAM) is the set of frameworks, technologies, and governance processes that ensure digital  identities are authenticated, authorized, and audited across information systems. IAM sits at the intersection of security, risk, and compliance, providing the technical substrate for Zero‑Trust strategies and regulatory mandates such as GDPR and HIPAA.
 
 ### Okta IAM Framework — Core Components (2024)
 
-* **Identity management & lifecycle** – automated provisioning/de‑provisioning, profile services, privileged‑account
-  handling, governance & attestation.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
-* **Authentication methods** – passwords & PINs, hardware/soft tokens, biometrics, adaptive MFA, and password‑less
-  flows.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
-* **Authorization & access control** – PBAC/ABAC rules, just‑in‑time (JIT) elevation, least‑privilege enforcement,
-  separation‑of‑duties checks.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
-* **Role management & SSO** – role hierarchies, dynamic assignment, web/federated SSO across
-  domains.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
-* **Directory services** – centralized (AD/LDAP) or cloud directories, virtual/meta directories, sync & federation
-  between sources.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
+* **Identity management & lifecycle** – automated provisioning/de‑provisioning, profile services, privileged‑account handling, governance & attestation.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
+* **Authentication methods** – passwords & PINs, hardware/soft tokens, biometrics, adaptive MFA, and password‑less flows.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
+* **Authorization & access control** – PBAC/ABAC rules, just‑in‑time (JIT) elevation, least‑privilege enforcement, separation‑of‑duties checks.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
+* **Role management & SSO** – role hierarchies, dynamic assignment, web/federated SSO across domains.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
+* **Directory services** – centralized (AD/LDAP) or cloud directories, virtual/meta directories, sync & federation between sources.([okta.com](https://www.okta.com/identity-101/identity-and-access-management/))
 
 These building blocks operate together to ensure “the right people have the right access to the right resources at the
 right time,” as Okta’s Identity 101 guide puts
@@ -387,7 +372,6 @@ Time‑boxed elevation with approval workflow; session recording; vaulting secre
 1. **Clone the lab repo**
 
    ```bash
-   git clone https://github.com/cybersec‑insights/iampilot‑centralized.git
    cd iampilot‑centralized
    ```
 2. **Review `docker-compose.yml`** (excerpt):
@@ -1105,11 +1089,6 @@ privacy trade‑offs.
 | **15** | **PBAC / ABAC & JIT Elevation**      | OPA + Cedar, on‑demand sudo to privileged pod |
 | **16** | **Role Hierarchies & Federated SSO** | Keycloak roles mapped to SAML & OIDC clients  |
 | **17** | **Directory Sync & Federation**      | OpenLDAP ↔ Keycloak bidirectional sync        |
-
-All **17 labs**—each with zero‑config `docker‑compose.yml`, detailed scripts, top‑level **Makefile**, and **README.md**
-—are zipped in **`iam_hands_on_labs_v2.zip`**.[Download the bundle](sandbox:/mnt/data/iam_hands_on_labs_v2.zip)
-
----
 
 ---
 
