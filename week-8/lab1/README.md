@@ -19,20 +19,20 @@ This lab demonstrates how to provision an OpenLDAP directory, federate it into K
    curl -sf http://localhost:8080/realms/master
    ```
 
-3. Manually add the CentralIAM realm and LDAP provider:
-   ```bash
-   KC=$(docker ps -qf "ancestor=quay.io/keycloak/keycloak:24.0")
+   3. Manually add the CentralIAM realm and LDAP provider:
+      ```bash
+      KC=$(docker ps -qf "ancestor=quay.io/keycloak/keycloak:24.0")
 
-   # Login kcadm
-   docker exec -i $KC /opt/keycloak/bin/kcadm.sh config credentials      --server http://localhost:8080 --realm master --user admin --password admin
+      # Login kcadm
+      docker exec -i $KC /opt/keycloak/bin/kcadm.sh config credentials      --server http://localhost:8080 --realm master --user admin --password admin
 
-   # Create realm
-   docker exec -i $KC /opt/keycloak/bin/kcadm.sh create realms      -s realm=CentralIAM -s enabled=true || true
+      # Create realm
+      docker exec -i $KC /opt/keycloak/bin/kcadm.sh create realms      -s realm=CentralIAM -s enabled=true || true
 
-   # Configure LDAP provider
-   docker exec -i $KC /opt/keycloak/bin/kcadm.sh create components -r CentralIAM <<EOF
-{"name":"ldap","providerId":"ldap","providerType":"org.keycloak.storage.UserStorageProvider","config":{"editMode":["READ_ONLY"],"enabled":["true"],"vendor":["other"],"connectionUrl":["ldap://ldap:389"],"usersDn":["ou=People,dc=example,dc=com"],"authType":["simple"],"bindDn":["cn=admin,dc=example,dc=com"],"bindCredential":["adminpw"],"userObjectClasses":["inetOrgPerson"],"searchScope":["1"],"usernameLDAPAttribute":["uid"],"rdnLDAPAttribute":["uid"],"uuidLDAPAttribute":["entryUUID"],"pagination":["true"],"trustEmail":["true"],"importEnabled":["true"]}}
-EOF
+      # Configure LDAP provider
+      docker exec -i $KC /opt/keycloak/bin/kcadm.sh create components -r CentralIAM <<EOF
+      {"name":"ldap","providerId":"ldap","providerType":"org.keycloak.storage.UserStorageProvider","config":{"editMode":["READ_ONLY"],"enabled":["true"],"vendor":["other"],"connectionUrl":["ldap://ldap:389"],"usersDn":["ou=People,dc=example,dc=com"],"authType":["simple"],"bindDn":["cn=admin,dc=example,dc=com"],"bindCredential":["adminpw"],"userObjectClasses":["inetOrgPerson"],"searchScope":["1"],"usernameLDAPAttribute":["uid"],"rdnLDAPAttribute":["uid"],"uuidLDAPAttribute":["entryUUID"],"pagination":["true"],"trustEmail":["true"],"importEnabled":["true"]}}
+      EOF
    ```
 
 4. Test DNS inside intranet container:
