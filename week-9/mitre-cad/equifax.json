@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "SEAS-8405 Equifax Data Breach",
+    "article": "Equifax Data Breach Analysis",
+    "authors": ["Dr. Mallarapu"],
+    "orgs": ["GWU"],
+    "description": "CAD model representing the Equifax data breach of 2017",
+    "d3fend_version": "1.0.0",
+    "cad_schema_version": 1,
+    "published_date": "2025-05-17T07:11:00.000Z",
+    "references": [
+      "https://www.equifaxsecurity2017.com/",
+      "https://attack.mitre.org/techniques/T1190/"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "attacker",
+      "type": "agent-node",
+      "position": { "x": 100, "y": 100 },
+      "data": { "label": "Attacker", "sequence": "0", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 100, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "vulnerable_app",
+      "type": "artifact-node",
+      "position": { "x": 300, "y": 100 },
+      "data": { "label": "Vulnerable Apache Struts Application", "sequence": "0", "d3f_class": "d3f:WebApplication", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 250, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "exploit",
+      "type": "attack-node",
+      "position": { "x": 500, "y": 100 },
+      "data": { "label": "Exploit Public-Facing Application", "sequence": "1", "d3f_class": "d3f:T1190", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 250, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "database",
+      "type": "artifact-node",
+      "position": { "x": 700, "y": 100 },
+      "data": { "label": "Database", "sequence": "0", "d3f_class": "d3f:Database", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 150, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "lateral_movement",
+      "type": "attack-node",
+      "position": { "x": 900, "y": 100 },
+      "data": { "label": "Lateral Movement", "sequence": "2", "d3f_class": "d3f:T1210", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 200, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "exfiltration",
+      "type": "attack-node",
+      "position": { "x": 1100, "y": 100 },
+      "data": { "label": "Data Exfiltration", "sequence": "3", "d3f_class": "d3f:T1048", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 200, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "patch_management",
+      "type": "countermeasure-node",
+      "position": { "x": 300, "y": 200 },
+      "data": { "label": "Patch Management", "sequence": "0", "d3f_class": "d3f:PatchManagement", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 200, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "network_segmentation",
+      "type": "countermeasure-node",
+      "position": { "x": 500, "y": 200 },
+      "data": { "label": "Network Segmentation", "sequence": "0", "d3f_class": "d3f:NetworkSegmentation", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 200, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "data_encryption",
+      "type": "countermeasure-node",
+      "position": { "x": 700, "y": 200 },
+      "data": { "label": "Data Encryption", "sequence": "0", "d3f_class": "d3f:DataEncryption", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 200, "height": 50 },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "intrusion_detection",
+      "type": "countermeasure-node",
+      "position": { "x": 900, "y": 200 },
+      "data": { "label": "Intrusion Detection System", "sequence": "0", "d3f_class": "d3f:IntrusionDetectionSystem", "user_properties": [] },
+      "origin": [0.5, 0],
+      "measured": { "width": 250, "height": 50 },
+      "selected": false,
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "editableEdge",
+      "data": { "label": "participates-in", "d3f_property": "d3f:participates-in" },
+      "source": "attacker",
+      "sourceHandle": "source",
+      "target": "exploit",
+      "targetHandle": "target",
+      "id": "edge1",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "uses", "d3f_property": "d3f:uses" },
+      "source": "exploit",
+      "sourceHandle": "source",
+      "target": "vulnerable_app",
+      "targetHandle": "target",
+      "id": "edge2",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "participates-in", "d3f_property": "d3f:participates-in" },
+      "source": "attacker",
+      "sourceHandle": "source",
+      "target": "lateral_movement",
+      "targetHandle": "target",
+      "id": "edge3",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "targets", "d3f_property": "d3f:targets" },
+      "source": "lateral_movement",
+      "sourceHandle": "source",
+      "target": "database",
+      "targetHandle": "target",
+      "id": "edge4",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "participates-in", "d3f_property": "d3f:participates-in" },
+      "source": "attacker",
+      "sourceHandle": "source",
+      "target": "exfiltration",
+      "targetHandle": "target",
+      "id": "edge5",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "exfiltrates-from", "d3f_property": "d3f:exfiltrates-from" },
+      "source": "exfiltration",
+      "sourceHandle": "source",
+      "target": "database",
+      "targetHandle": "target",
+      "id": "edge6",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "mitigates", "d3f_property": "d3f:mitigates" },
+      "source": "patch_management",
+      "sourceHandle": "source",
+      "target": "exploit",
+      "targetHandle": "target",
+      "id": "edge7",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "restricts", "d3f_property": "d3f:restricts" },
+      "source": "network_segmentation",
+      "sourceHandle": "source",
+      "target": "lateral_movement",
+      "targetHandle": "target",
+      "id": "edge8",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "protects", "d3f_property": "d3f:protects" },
+      "source": "data_encryption",
+      "sourceHandle": "source",
+      "target": "database",
+      "targetHandle": "target",
+      "id": "edge9",
+      "selected": false
+    },
+    {
+      "type": "editableEdge",
+      "data": { "label": "analyzes", "d3f_property": "d3f:analyzes" },
+      "source": "intrusion_detection",
+      "sourceHandle": "source",
+      "target": "exfiltration",
+      "targetHandle": "target",
+      "id": "edge10",
+      "selected": false
+    }
+  ]
+}

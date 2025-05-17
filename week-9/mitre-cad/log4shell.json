@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Log4Shell Breach CAD Model",
+    "authors": ["Analyst"],
+    "orgs": ["Cyber Defense Team"],
+    "description": "CAD model for Log4Shell breach scenario",
+    "d3fend_version": "1.0.0",
+    "cad_schema_version": 1,
+    "published_date": "2025-05-18T09:00:00.000Z",
+    "references": ["https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228"]
+  },
+  "nodes": [
+    {"id": "attacker", "type": "agent-node", "position": {"x": 100, "y": 100}, "data": {"label": "Attacker"}},
+    {"id": "app", "type": "artifact-node", "position": {"x": 300, "y": 100}, "data": {"label": "Vulnerable App", "d3f_class": "d3f:Application"}},
+    {"id": "exploit", "type": "attack-node", "position": {"x": 500, "y": 100}, "data": {"label": "Exploit App", "d3f_class": "d3f:T1190"}},
+    {"id": "execution", "type": "attack-node", "position": {"x": 700, "y": 100}, "data": {"label": "Command Execution", "d3f_class": "d3f:T1059"}},
+    {"id": "ransomware", "type": "attack-node", "position": {"x": 900, "y": 100}, "data": {"label": "Ransomware", "d3f_class": "d3f:T1486"}},
+    {"id": "patch", "type": "countermeasure-node", "position": {"x": 300, "y": 200}, "data": {"label": "Patching", "d3f_class": "d3f:PatchManagement"}},
+    {"id": "waf", "type": "countermeasure-node", "position": {"x": 500, "y": 200}, "data": {"label": "WAF", "d3f_class": "d3f:WebApplicationFirewall"}},
+    {"id": "segmentation", "type": "countermeasure-node", "position": {"x": 900, "y": 200}, "data": {"label": "Segmentation", "d3f_class": "d3f:NetworkSegmentation"}}
+  ],
+  "edges": [
+    {"source": "attacker", "target": "exploit", "data": {"label": "initiates"}},
+    {"source": "exploit", "target": "app", "data": {"label": "exploits"}},
+    {"source": "exploit", "target": "execution", "data": {"label": "leads-to"}},
+    {"source": "execution", "target": "ransomware", "data": {"label": "deploys"}},
+    {"source": "patch", "target": "exploit", "data": {"label": "mitigates"}},
+    {"source": "waf", "target": "exploit", "data": {"label": "blocks"}},
+    {"source": "segmentation", "target": "ransomware", "data": {"label": "limits"}}
+  ]
+}
