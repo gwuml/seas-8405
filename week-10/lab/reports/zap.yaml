@@ -3,7 +3,7 @@ env:
   - excludePaths: []
     name: baseline
     urls:
-    - http://juice:3000
+    - http://waf:8080
   parameters:
     failOnError: true
     progressToStdout: false
@@ -14,7 +14,7 @@ jobs:
   type: passiveScan-config
 - parameters:
     maxDuration: 1
-    url: http://juice:3000
+    url: http://waf:8080
   type: spider
 - parameters:
     maxDuration: 0
@@ -27,7 +27,7 @@ jobs:
 - parameters:
     reportDescription: ''
     reportDir: /zap/wrk/
-    reportFile: zap-before.html
+    reportFile: zap-after.html
     reportTitle: ZAP Scanning Report
     template: traditional-html
   type: report

@@ -212,7 +212,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sat, 31 May 2025 00:24:44
+		Generated on Sat, 31 May 2025 13:35:25
 	</h3>
 
 	<h3>
@@ -303,7 +303,7 @@ td {
 			<tr>
 				<td><a href="#10098">Cross-Domain Misconfiguration</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">10</td>
+				<td align="center">13</td>
 			</tr>
 			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
@@ -328,7 +328,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">10</td>
+				<td align="center">19</td>
 			</tr>
 			<tr>
 				<td><a href="#10027">Information Disclosure - Suspicious Comments</a></td>
@@ -343,7 +343,7 @@ td {
 			<tr>
 				<td><a href="#10049">Non-Storable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">7</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
@@ -353,7 +353,7 @@ td {
 			<tr>
 				<td><a href="#10049">Storable but Non-Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">5</td>
+				<td align="center">6</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -733,6 +733,68 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/ftp/eastere.gg">http://waf:8080/ftp/eastere.gg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/ftp/encrypt.pyc">http://waf:8080/ftp/encrypt.pyc</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://waf:8080/ftp/incident-support.kdbx">http://waf:8080/ftp/incident-support.kdbx</a></td>
 					</tr>
 					<tr>
@@ -795,7 +857,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_linux_arm_64.url">http://waf:8080/ftp/quarantine/juicy_malware_linux_arm_64.url</a></td>
+						<td width="80%"><a href="http://waf:8080/ftp/package.json.bak">http://waf:8080/ftp/package.json.bak</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -826,7 +888,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_macos_64.url">http://waf:8080/ftp/quarantine/juicy_malware_macos_64.url</a></td>
+						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_linux_amd_64.url">http://waf:8080/ftp/quarantine/juicy_malware_linux_amd_64.url</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -857,7 +919,38 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_windows_64.exe.url">http://waf:8080/ftp/quarantine/juicy_malware_windows_64.exe.url</a></td>
+						<td width="80%"><a href="http://waf:8080/polyfills.js">http://waf:8080/polyfills.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/robots.txt">http://waf:8080/robots.txt</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -949,7 +1042,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">13</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2151,6 +2244,285 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080">http://waf:8080</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1650485437</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1650485437, which evaluates to: 2022-04-20 20:10:37.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080">http://waf:8080</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1981395349</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1981395349, which evaluates to: 2032-10-14 19:35:49.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080">http://waf:8080</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">2038834951</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">2038834951, which evaluates to: 2034-08-10 15:02:31.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/">http://waf:8080/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1650485437</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1650485437, which evaluates to: 2022-04-20 20:10:37.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/">http://waf:8080/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1981395349</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1981395349, which evaluates to: 2032-10-14 19:35:49.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/">http://waf:8080/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">2038834951</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">2038834951, which evaluates to: 2034-08-10 15:02:31.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/sitemap.xml">http://waf:8080/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1650485437</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1650485437, which evaluates to: 2022-04-20 20:10:37.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/sitemap.xml">http://waf:8080/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1981395349</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1981395349, which evaluates to: 2032-10-14 19:35:49.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/sitemap.xml">http://waf:8080/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">2038834951</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">2038834951, which evaluates to: 2034-08-10 15:02:31.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://waf:8080/styles.css">http://waf:8080/styles.css</a></td>
 					</tr>
 					<tr>
@@ -2460,7 +2832,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">19</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2892,6 +3264,37 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/ftp/package.json.bak">http://waf:8080/ftp/package.json.bak</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">403</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_linux_amd_64.url">http://waf:8080/ftp/quarantine/juicy_malware_linux_amd_64.url</a></td>
 					</tr>
 					<tr>
@@ -2923,69 +3326,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_linux_arm_64.url">http://waf:8080/ftp/quarantine/juicy_malware_linux_arm_64.url</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">403</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_macos_64.url">http://waf:8080/ftp/quarantine/juicy_malware_macos_64.url</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">403</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="http://waf:8080/ftp/quarantine/juicy_malware_windows_64.exe.url">http://waf:8080/ftp/quarantine/juicy_malware_windows_64.exe.url</a></td>
+						<td width="80%"><a href="http://waf:8080/ftp/suspicious_errors.yml">http://waf:8080/ftp/suspicious_errors.yml</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3015,7 +3356,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">7</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3334,6 +3675,37 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://waf:8080/polyfills.js">http://waf:8080/polyfills.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://waf:8080/runtime.js">http://waf:8080/runtime.js</a></td>
 					</tr>
 					<tr>
@@ -3364,7 +3736,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">5</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
