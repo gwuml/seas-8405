@@ -103,7 +103,6 @@ step-4: ## analyze before and after scan reports
 step-5: ## print ZTA / DiD / ASA bullets
 	@echo "Zero-Trust        : WAF = Policy Enforcement Point (PEP)"
 	@echo "Defence-in-Depth  : WAF (L7) → Suricata (L3/4) → App"
-	@echo "ASA-style edge    : WAF stands in for a perimeter firewall"
 
 ###############################################################################
 # 6️⃣  15-minute live demo script
@@ -143,3 +142,4 @@ sync: ## rsync to VM (edit host/key as needed)
 	rsync -avuz -e 'ssh -i ~/.ssh/keys/seas-8405.pem' . ubuntu@100.28.58.31:lab/
 
 clean: step-7        ## alias – same as step-7
+

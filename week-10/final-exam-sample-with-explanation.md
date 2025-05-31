@@ -428,14 +428,199 @@ Which combination of controls best prevents SSRF, detects token misuse, restrict
 |                                                                                                                |                             | **Prevent Access (ZTA)**   | Continuous Verif + Micro-seg        | Verifies each request (Zero Trust); limits credential scope.                                           | IAM Hardening + Micro-seg (Opt 4)       | ✅ **Strong:** Matches correct answer; slightly less focus elsewhere.                                      | **Lesson:** Continuous verification enforces Zero Trust per request.                 |
 |                                                                                                                |                             | **Respond (ASA)**          | Auto IAM Adjust + Adaptive WAF      | Revokes tokens; blocks exfil IPs dynamically.                                                          | SOAR + IRT (Opt 2)                      | ❌ **Slow:** Manual IRT can’t match automated speed.                                                      | **Lesson:** Automated IAM responses outpace manual fixes in the cloud.               |
 
+---
+
+## Question: Ponzi Scheme Scam on DeFi Platform
+
+### Scenario
+
+In a 2025 DeFi platform, an attacker uses a Ponzi scheme scam to lure investors with fake high returns, as seen in DeFi scams. The attacker collects funds from new investors to pay earlier ones, collapsing when new investments cease.
+
+### Tactics Used (MITRE ATT&CK)
+
+* **Collection (T1213)**: Data from Information Repositories
+
+### Security Controls
+
+* **AI-driven SIEM** (real-time transaction monitoring)
+* **User and Entity Behavioral Analytics (UEBA)** (anomaly detection)
+* **Security Orchestration, Automation, and Response (SOAR)** (automated playbooks)
+* **Blockchain Audit Trails** (transaction transparency)
+* **Smart Contract Auditing Tools** (vulnerability detection)
+* **Decentralized Identity (DID)** (secure authentication)
+* **Homomorphic Encryption (HE)** (data protection)
+* **Graph Neural Networks (GNN)** (transaction pattern analysis)
+* **Random Forest (RF)** (scam detection)
+* **Intrusion Detection System (IDS)** (network monitoring)
+
+### Question
+
+Which combination of controls best prevents the Ponzi scheme scam, detects fraudulent patterns, prevents unauthorized access, and responds to the incident, using Web 3.0’s RF-based detection?
+
+### Options
+
+**1.**
+* **Prevent (SIEM)**: AI-driven SIEM + UEBA
+* **Detect (GNN)**: Graph Neural Networks + Random Forest
+* **Prevent Access (DID)**: Decentralized Identity + Homomorphic Encryption
+* **Respond (IDS)**: Intrusion Detection System + SOAR
+
+**2.**
+* **Prevent (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+* **Detect (IDS)**: Intrusion Detection System + UEBA
+* **Prevent Access (SIEM)**: AI-driven SIEM + Graph Neural Networks
+* **Respond (DID)**: Decentralized Identity + Random Forest
+
+**3.**
+* **Prevent (HE)**: Homomorphic Encryption + Graph Neural Networks
+* **Detect (SOAR)**: SOAR + Random Forest
+* **Prevent Access (Audit)**: Blockchain Audit Trails + Intrusion Detection System
+* **Respond (SIEM)**: AI-driven SIEM + UEBA
+
+**4.**
+* **Prevent (RF)**: Random Forest + Intrusion Detection System
+* **Detect (DID)**: Decentralized Identity + Homomorphic Encryption
+* **Prevent Access (SOAR)**: SOAR + Graph Neural Networks
+* **Respond (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+
+**5.**
+* **Prevent (SOAR)**: SOAR + UEBA
+* **Detect (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+* **Prevent Access (RF)**: Random Forest + Intrusion Detection System
+* **Respond (HE)**: Homomorphic Encryption + Graph Neural Networks
+
+**6.**
+* **Prevent (DID)**: Decentralized Identity + Homomorphic Encryption
+* **Detect (SIEM)**: AI-driven SIEM + UEBA
+* **Prevent Access (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+* **Respond (SOAR)**: SOAR + Graph Neural Networks
+
+### Correct Answer: 6
+ 
+---
+
+| **Scenario**                     | **Short Description**                                                                 | **Correct Answer**                           | **Why Correct?**                                                                                                                               | **Closest Alternative**               | **Critical Flaw in Alternative**                                                                                            | **Real-World Lesson**                                                                                                                              |  
+|----------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Ponzi Scheme Scam**            | Prevent Ponzi scams, detect fraudulent patterns, prevent unauthorized access, respond using RF | **6**: DID + HE + AI-SIEM + UEBA + Blockchain Audit + Smart Contract Audit + SOAR + GNN | • UEBA detects abnormal ROI patterns<br>• RF identifies Ponzi financial structures<br>• Smart contract audits expose scam logic | **1**: AI-SIEM + UEBA + GNN + RF + DID + HE + IDS + SOAR | ❌ GNN overkill for Ponzi detection (RF better)<br>❌ IDS irrelevant to contract fraud<br>❌ No smart contract audit layer | • **Unaudited contracts**: 2023 DeFi scams used unaudited yield promises<br>• **No behavioral checks**: Missed "guaranteed returns" anomalies<br>• **Pseudonymity**: Fake projects exploited anonymous launches |  
+
+
+
+---
+
+## Question: Money Laundering Attack on DeFi Platform
+
+### Scenario
+
+In a Web 3.0 DeFi ecosystem, an attacker conducts money laundering by transferring illicit funds through multiple wallets, as seen in the ByBit hack. The attacker uses decentralized exchanges to obscure fund origins.
+
+### Tactics Used (MITRE ATT&CK)
+
+* **Exfiltration (T1041)**: Exfiltration Over C2 Channel
+
+### Security Controls
+
+* **AI-driven SIEM** (real-time transaction monitoring)
+* **User and Entity Behavioral Analytics (UEBA)** (anomaly detection)
+* **Security Orchestration, Automation, and Response (SOAR)** (automated playbooks)
+* **Blockchain Audit Trails** (transaction transparency)
+* **Smart Contract Auditing Tools** (vulnerability detection)
+* **Decentralized Identity (DID)** (secure authentication)
+* **Homomorphic Encryption (HE)** (data protection)
+* **Graph Neural Networks (GNN)** (transaction pattern analysis)
+* **Random Forest (RF)** (scam detection)
+* **Intrusion Detection System (IDS)** (network monitoring)
+
+### Question
+
+Which combination of controls best prevents the money laundering attack, detects illicit transfers, prevents unauthorized access, and responds to the incident, using Web 3.0’s GNN-based tracking?
+
+### Options
+
+**1.**
+* **Prevent (DID)**: Decentralized Identity + Homomorphic Encryption
+* **Detect (SIEM)**: AI-driven SIEM + UEBA
+* **Prevent Access (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+* **Respond (SOAR)**: SOAR + Graph Neural Networks
+
+**2.**
+* **Prevent (SIEM)**: AI-driven SIEM + UEBA
+* **Detect (GNN)**: Graph Neural Networks + Random Forest
+* **Prevent Access (DID)**: Decentralized Identity + Homomorphic Encryption
+* **Respond (IDS)**: Intrusion Detection System + SOAR
+
+**3.**
+* **Prevent (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+* **Detect (IDS)**: Intrusion Detection System + UEBA
+* **Prevent Access (SIEM)**: AI-driven SIEM + Graph Neural Networks
+* **Respond (DID)**: Decentralized Identity + Random Forest
+
+**4.**
+* **Prevent (HE)**: Homomorphic Encryption + Graph Neural Networks
+* **Detect (SOAR)**: SOAR + Random Forest
+* **Prevent Access (Audit)**: Blockchain Audit Trails + Intrusion Detection System
+* **Respond (SIEM)**: AI-driven SIEM + UEBA
+
+**5.**
+* **Prevent (RF)**: Random Forest + Intrusion Detection System
+* **Detect (DID)**: Decentralized Identity + Homomorphic Encryption
+* **Prevent Access (SOAR)**: SOAR + Graph Neural Networks
+* **Respond (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+
+**6.**
+* **Prevent (SOAR)**: SOAR + UEBA
+* **Detect (Audit)**: Blockchain Audit Trails + Smart Contract Auditing Tools
+* **Prevent Access (RF)**: Random Forest + Intrusion Detection System
+* **Respond (HE)**: Homomorphic Encryption + Graph Neural Networks
+
+### Correct Answer: 1
+
+---
+
+| **Scenario**                     | **Short Description**                                                                 | **Correct Answer**                           | **Why Correct?**                                                                                                                               | **Closest Alternative**               | **Critical Flaw in Alternative**                                                                                            | **Real-World Lesson**                                                                                                                              |  
+|----------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|  
+| **Money Laundering Attack**      | Prevent money laundering, detect illicit transfers, prevent unauthorized access, respond using GNN | **1**: DID + HE + AI-SIEM + UEBA + Blockchain Audit + Smart Contract Audit + SOAR + GNN | • DID prevents anonymous wallet creation<br>• GNN traces multi-wallet transaction chains<br>• Smart contract audits block laundering logic | **2**: AI-SIEM + UEBA + GNN + RF + DID + HE + IDS + SOAR | ❌ RF not optimized for transaction chain analysis<br>❌ IDS ineffective for on-chain activity<br>❌ Misaligned prevention/detection | • **Obfuscated trails**: ByBit hack showed wallet hopping exploits<br>• **Weak analytics**: Traditional tools failed to trace cross-DEX transfers<br>• **Anonymous access**: Lack of DID enabled fake wallets |  
+
+---
+
+### **Fill-in-the-Blank Questions**  
+| **Question**                                                                                                                                 | **Answer**               | **Key Concept Explanation**                                                                 |  
+|----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|---------------------------------------------------------------------------------------------|  
+| The Linux kernel’s __________ uses per-CPU run-queues, but a task that is "pinned" to one core can still be pre-empted by a higher-priority task on that same core. | **Completely Fair Scheduler (CFS)** | CFS balances load across CPU cores but allows core-local preemption for real-time priority enforcement |  
+| In overlayfs, a write to a file that resides only in the read-only lower layer triggers a __________ mechanism, copying the file into the writable upper layer before modification. | **copy-on-write (CoW)** | CoW preserves lower-layer integrity by creating writable copies for modifications - critical for container security |  
+
 
 --- 
 ## Summary
+ 
+| **Scenario**                     | **Control Function**       | **Correct Answer (Controls)**       | **Why Correct? (Official Explanation)**                                                                 | **Why Alternatives Fail**                                                                                                 | **Real-World Lesson**                                                                 |  
+|----------------------------------|----------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
+| **Equifax Multi-Stage**          | **Prevent (DiD)**          | Patch Mgmt + Auto Patching          | • Removes Struts vulnerability                                                                         | ❌ *Opt 1/2/4/5/6:* Rely on WAF alone; miss automated patching for root cause fix                                       | • Unpatched CVE-2017-5638 for 2 months allowed initial access                        |  
+|                                  | **Detect (ASA)**           | Behavioral Analytics + SIEM         | • Spots lateral SSH pivot attempts                                                                     | ❌ *Opt 1/5:* Use misconfigured vuln scanning (false negatives); miss behavioral analysis                               | • Expired GuardDuty certs disabled critical alerts                                   |  
+|                                  | **Prevent Access (ZTA)**   | Micro-segmentation + WAF            | • Blocks east-west traffic from web to DB                                                              | ❌ *Opt 2:* Encrypts data but doesn’t block SSH pivots                                                                  | • No micro-segmentation allowed direct EC2→RDS access                                |  
+|                                  | **Respond (ASA)**          | SOAR + IRT Coordination             | • Ensures rapid containment                                                                            | ❌ *Opt 4:* Behavioral Analytics ≠ IRT coordination                                                                     | • Slow response allowed 143M records exfiltration                                    |  
+| **Equifax Lateral**              | **Prevent (DiD)**          | WAF + Auto Patching                 | • Stops pivot/harvest with micro-seg + TLS                                                            | ❌ *Opt 1/3:* Encryption irrelevant to SSH; WAF misplaced in "Prevent Access"                                           | • GuardDuty offline for 4 months missed pivot detection                              |  
+|                                  | **Detect (ASA)**           | CloudWatch + Behavioral Analytics   | • Reveals unusual DB access via UEBA + SIEM                                                           | ❌ *Opt 4:* IDS expired (no alerts); lacks cloud-native context                                                          | • Misconfigured Inspector produced false negatives                                   |  
+|                                  | **Prevent Access (ZTA)**   | Micro-segmentation + Cert Mgmt      | • Halts unauthorized connections with segmentation + IDS                                              | ❌ *Opt 2:* "Network segmentation" too broad; allows web→DB traffic                                                     | • Flat network permitted SSH pivots across subnets                                   |  
+|                                  | **Respond (ASA)**          | IRT + SOAR                          | • Enables rapid lock-down/forensics                                                                   | ❌ *Opt 5:* IRT + Behavioral Analytics lacks SOAR automation                                                            | • Manual processes delayed containment by 76 days                                    |  
+| **SolarWinds Supply Chain**      | **Prevent (DiD)**          | Code Signing + Network Segmentation | • Blocks tampered builds                                                                               | ❌ *Opt 3:* Network + micro-segmentation alone allows malicious signed binaries                                         | • Weak build-server passwords (`solarwinds123`) compromised pipeline                 |  
+|                                  | **Detect (ASA)**           | Audit Logs + Anomaly Detection      | • Catches unauthorized modifications                                                                  | ❌ *Opt 1:* Tamper detection is reactive (post-breach)                                                                  | • No tamper checks allowed backdoored binaries for 9+ months                         |  
+|                                  | **Prevent Access (ZTA)**   | Continuous Validation + Least Priv  | • Ensures only genuine artifacts deploy                                                               | ❌ *Opt 4:* Least Privilege + Continuous Val misses network controls                                                    | • Blind trust in signed binaries infected 18,000+ systems                            |  
+|                                  | **Respond (ASA)**          | Dynamic Policies + Encrypted Chans  | • Enables rapid containment/rollback                                                                  | ❌ *Opt 6:* Dynamic Policies + IRT lacks encryption to block C2                                                          | • Delayed response allowed attackers to maintain persistence                         |  
+| **SolarWinds Lateral**           | **Prevent (DiD)**          | Code Signing + Network Segmentation | • Blocks pivot to update tier                                                                          | ❌ *Opt 2:* Least Privilege + Encryption can’t stop binary execution                                                    | • Minimal segmentation allowed Build→Update server pivots                            |  
+|                                  | **Detect (ASA)**           | Tamper Detection + Behavioral Mon   | • Flags unauthorized backdoor writes                                                                  | ❌ *Opt 3:* Anomaly detection in builds ≠ real-time backdoor detection                                                  | • No integrity checks for system services                                            |  
+|                                  | **Prevent Access (ZTA)**   | Micro-seg + Continuous Validation   | • Stops execution of unapproved binaries                                                              | ❌ *Opt 5:* Micro-seg + Encryption doesn’t validate artifacts                                                           | • Attackers installed persistent backdoors in system processes                       |  
+|                                  | **Respond (ASA)**          | SOAR + Dynamic Policies             | • Isolates compromised nodes                                                                          | ❌ *Opt 1:* SOAR + Audit Logging is passive (no isolation)                                                              | • Passive logging failed to catch live attacker movement                             |  
+| **Capital One SSRF**             | **Prevent (DiD)**          | WAF Validation + IAM Hardening      | • Stops SSRF and credential overreach                                                                 | ❌ *Opt 3:* Continuous Verif + WAF misses IAM hardening (stolen tokens still work)                                      | • Overly permissive IAM role allowed S3 bucket access                                |  
+|                                  | **Detect (ASA)**           | GuardDuty + Behavioral Monitoring   | • Catches metadata misuse                                                                             | ❌ *Opt 4:* Behavioral Mon + CloudWatch lacks GuardDuty’s AWS-specific threat intel                                    | • WAF rules too permissive allowed SSRF to metadata service                          |  
+|                                  | **Prevent Access (ZTA)**   | Continuous Verif + Micro-seg        | • Blocks unauthorized S3 calls                                                                        | ❌ *Opt 2:* Micro-seg + Continuous Verif duplicates functions; lacks IAM context                                        | • No micro-segmentation let attackers traverse network with stolen creds             |  
+|                                  | **Respond (ASA)**          | Auto IAM Adjust + Adaptive WAF      | • Throttles/locks exfiltration channels                                                               | ❌ *Opt 5:* Auto IAM Adjust + Cert Mgmt misses WAF tuning for active blocking                                           | • Slow token revocation allowed access to 100+ S3 buckets                            |  
+| **DeFi Ponzi Scheme**            | **Prevent (DiD)**          | DID + Homomorphic Encryption        | • Secures investor trust (prevents anonymous scams)                                                   | ❌ *Opt 1/4:* SIEM/UEBA/RF detect but don’t prevent; IDS irrelevant on-chain                                            | • Unaudited contracts promised "guaranteed returns" to 12K+ investors                |  
+|                                  | **Detect (ASA)**           | AI-SIEM + UEBA                      | • Identifies Ponzi patterns                                                                           | ❌ *Opt 2/3:* IDS/SOAR not designed for financial anomaly detection                                                     | • No behavioral checks missed abnormal ROI patterns                                  |  
+|                                  | **Prevent Access (ZTA)**   | Blockchain Audit + Smart Contract Audit | • Verifies contract legitimacy                                                                      | ❌ *Opt 5:* RF + IDS can’t audit contracts; SOAR not access control                                                     | • Pseudonymous launches enabled fake "high-yield" projects                           |  
+|                                  | **Respond (ASA)**          | SOAR + Graph Neural Networks        | • Automates response (aligns with RF-based detection)                                                | ❌ *Opt 6:* HE + GNN not response tools; Blockchain Audit ≠ action                                                      | • Delayed takedowns allowed $34M in losses                                          |  
+| **DeFi Money Laundering**        | **Prevent (DiD)**          | DID + Homomorphic Encryption        | • Prevents anonymous wallet creation                                                                  | ❌ *Opt 2/3:* SIEM/UEBA detect but don’t prevent; Blockchain Audit not preventive                                       | • Anonymous wallets enabled ByBit hack ($8M laundered)                              |  
+|                                  | **Detect (ASA)**           | AI-SIEM + UEBA                      | • Traces transaction chains in real-time                                                              | ❌ *Opt 4/5:* SOAR/RF not detection tools; IDS useless for cross-DEX analysis                                           | • Traditional tools failed to track wallet-hopping                                  |  
+|                                  | **Prevent Access (ZTA)**   | Blockchain Audit + Smart Contract Audit | • Blocks laundering logic in contracts                                                              | ❌ *Opt 6:* RF + IDS can’t restrict contract access; HE not access control                                              | • Weak analytics missed multi-wallet transaction chains                              |  
+|                                  | **Respond (ASA)**          | SOAR + Graph Neural Networks        | • Automates tracing/containment (uses GNN-based tracking)                                            | ❌ *Opt 1:* SOAR + GNN correct but other functions flawed                                                                | • Manual investigations allowed obfuscated fund flows                                |  
 
-| **Scenario**                     | **Short Description**                                                                 | **Correct Answer**                           | **Why Correct?**                                                                                                                               | **Closest Alternative**               | **Critical Flaw in Alternative**                                                                                            | **Real-World Lesson**                                                                                                                                 |  
-|----------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|  
-| **Equifax Multi-Stage**          | Prevent Struts exploit, detect lateral movement, restrict DB access, respond to exfil | **3**: Patch Mgmt + Auto Patch + Micro-seg + WAF + Behavioral Analytics + SOAR + IRT | • Auto-patching fixes CVE-2017-5638<br>• Micro-seg blocks DB access<br>• Behavioral analytics detects SSH pivots                                  | **5**: WAF + Patch Mgmt + SIEM + Vuln Scanning | ❌ Relied on misconfigured vuln scanning (false negatives)<br>❌ No micro-segmentation to block SSH→DB movement             | • **Unpatched vulnerability**: Failed to patch critical Struts flaw<br>• **Expired controls**: GuardDuty certificates lapsed<br>• **No segmentation**: Web-DB tiers openly connected |  
-| **Equifax Lateral Movement**     | Block SSH pivot, prevent data harvesting, respond to exfil                            | **6**: WAF + Auto Patch + Micro-seg + Cert Mgmt + CloudWatch + Behavioral Analytics + IRT + SOAR | • WAF blocks initial exploit<br>• Micro-seg prevents SSH pivot<br>• Valid certs ensure IDS alerts                                                | **2**: Micro-seg + Encrypted Data + Behavioral Analytics + SIEM | ❌ Encryption irrelevant to SSH<br>❌ Broad "network segmentation" ≠ **micro**-segmentation<br>❌ No WAF for initial exploit | • **Disabled monitoring**: GuardDuty offline due to expired certs<br>• **Misconfig**: Inspector produced false negatives<br>• **Flat network**: Allowed EC2→RDS SSH access         |  
-| **SolarWinds Supply Chain**      | Prevent backdoor injection, detect tampering, restrict updates, respond to malware    | **5**: Code Signing + Network Seg + Audit Logs + Anomaly Detect + Continuous Validation + Least Priv + Dynamic Policies | • Code signing blocks malicious binaries<br>• Least privilege limits blast radius<br>• Anomaly detection flags tampering                       | **3**: Network Seg + Micro-seg + Audit Logs + Anomaly Detect | ❌ Allows malicious *signed* binaries<br>❌ No least privilege for build servers<br>❌ No code signing verification         | • **No tamper checks**: Build pipeline unprotected<br>• **Weak segmentation**: Build→Update subnets connected<br>• **Blind trust**: Accepted signed binaries without validation     |  
-| **SolarWinds Lateral Movement**  | Halt pipeline lateral movement, prevent persistent backdoors                          | **6**: Code Signing + Network Seg + Tamper Detect + Behavioral Mon + Micro-seg + Continuous Val + SOAR + Dynamic Policies | • Code signing blocks malicious binaries<br>• Continuous validation stops backdoored artifacts<br>• Micro-seg enforces strict access            | **2**: Tamper Detect + Code Signing + Least Priv + Encrypted Comm | ❌ Least privilege irrelevant to binary execution<br>❌ Encryption doesn’t prevent lateral movement<br>❌ No continuous validation | • **Minimal segmentation**: Allowed pivot from Build→Update servers<br>• **No integrity checks**: Backdoors installed in system services<br>• **Passive logging**: No real-time tamper alerts |  
-| **Capital One SSRF**             | Prevent SSRF, detect token misuse, restrict S3 access, respond to exfil               | **6**: WAF + IAM Hardening + GuardDuty + Behavioral Mon + Continuous Verif + Micro-seg + Auto IAM Adjust + Adaptive WAF | • WAF blocks SSRF<br>• Least privilege IAM restricts S3<br>• Continuous verification validates per-request access                              | **3**: Continuous Verif + WAF + GuardDuty + Behavioral Mon | ❌ No IAM hardening → stolen tokens allow S3 access<br>❌ No micro-segmentation to limit credential scope                  | • **Overly permissive IAM**: EC2 role had wide S3 access<br>• **Weak WAF rules**: Allowed SSRF to metadata service<br>• **No segmentation**: Credentials traversed unrestricted  |  
+---
